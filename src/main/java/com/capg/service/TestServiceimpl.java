@@ -12,6 +12,7 @@ import com.capg.exceptions.IdNotFoundException;
 import com.capg.repo.CategoryRepository;
 import com.capg.repo.TestRepo;
 import com.capg.util.AppConstants;
+
 @Service
 public class TestServiceimpl implements TestService{
 
@@ -20,7 +21,6 @@ public class TestServiceimpl implements TestService{
 	
 	@Autowired
 	CategoryRepository categoryRepository;
-
 	
 	public Test addTest(Test test) {
 		
@@ -32,25 +32,15 @@ public class TestServiceimpl implements TestService{
 			System.out.println("Fetching Category: \n"+category);
 			test.setCategory(category);
 		}
-		return testRepo.save(test);
-//		Optional<Category> optionalCategory = categoryRepository.findById(test.getCategory().getCategoryId());
-//		Category category = null;
-//		if(optionalCategory.isPresent()) {
-//			category = optionalCategory.get();
-//		}
-//		test.setCategory(category);
-//		return testRepo.save(test);
-	
+		return testRepo.save(test);	
 	}
 
 
 	public Test updateTest(int tId, Test test) throws IdNotFoundException {
 		
-		Test updateTest=null;
-		
 		if(testRepo.existsById(tId))
 		{
-			updateTest=testRepo.findById(tId).get();
+//			updateTest=testRepo.findById(tId).get();
 			test.settId(tId);
 			return testRepo.save(test);
 		}

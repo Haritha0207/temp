@@ -99,6 +99,6 @@ public class Test {
 	@Override
 	public String toString() {
 		return "Test [tId=" + tId + ", tName=" + tName + ", noOfQuestions=" + noOfQuestions + ", maxMarks=" + maxMarks
-				+ ", isActive=" + isActive + ", category=" + category + "]";
+				+ ", isActive=" + isActive + ", category=" + category.getCategoryId() + "]";
 	}
 }
