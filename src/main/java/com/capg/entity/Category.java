@@ -29,14 +29,14 @@ public class Category {
 	
 	@OneToMany(mappedBy="category",cascade = CascadeType.ALL)
 	@JsonManagedReference(value = "category_id")
-	private List<Test> test= new ArrayList<>();
+	private List<Test> tests= new ArrayList<>();
 	
 	public List<Test> getTest() {
-		return test;
+		return tests;
 	}
 
-	public void setTest(List<Test> test) {
-		this.test = test;
+	public void setTest(List<Test> tests) {
+		this.tests = tests;
 	}
 
 	public Category() 
@@ -76,7 +76,7 @@ public class Category {
 	@Override
 	public String toString() {
 		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", questions=" + questions
-				+ "]";
+		+ "]";
 	}
 	
 }

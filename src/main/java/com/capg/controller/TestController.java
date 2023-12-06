@@ -32,7 +32,7 @@ public class TestController {
 	    @PostMapping("/addtest")
 		public ResponseEntity<Test> addTest(@RequestBody Test test)
 		{
-			return new ResponseEntity <Test>(testService.addTest(test), HttpStatus.OK);
+			return new ResponseEntity<Test>(testService.addTest(test), HttpStatus.OK);
 		}
 	    //update test
 	    @PutMapping("/update/{test_id}")
@@ -44,7 +44,7 @@ public class TestController {
 	    @GetMapping("/alltests")
 	    public ResponseEntity<List<Test>> getAllTests()
 		{
-			return new ResponseEntity <List<Test>>(testService.getAllTests(),HttpStatus.OK);
+			return new ResponseEntity<List<Test>>(testService.getAllTests(),HttpStatus.OK);
 		}
 
 	    //get single test	

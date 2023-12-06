@@ -150,7 +150,7 @@ public class Question {
 	public String toString() {
 		return "Question [question_id=" + question_id + ", questionName=" + questionName + ", option1=" + option1
 				+ ", option2=" + option2 + ", option3=" + option3 + ", option4=" + option4 + ", crctAnswer="
-				+ crctAnswer + ", category=" + category + ", isActive=" + isActive + ",test="+ test+"]";
+				+ crctAnswer + ", category=" + category.getCategoryId() + ", isActive=" + isActive +"]";
 	}
 	
 	
